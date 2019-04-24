@@ -1,3 +1,5 @@
+DROP TABLE time_entries;
+
 CREATE TABLE time_entries (
   id         BIGINT(20) NOT NULL AUTO_INCREMENT,
   project_id BIGINT(20),
@@ -7,4 +9,5 @@ CREATE TABLE time_entries (
 
   PRIMARY KEY (id)
 )
-  ENGINE = innodb;
+  ENGINE = innodb
+  DEFAULT CHARSET = utf8;
