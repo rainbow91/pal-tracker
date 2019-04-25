@@ -23,6 +23,10 @@ public class PalTrackerApplication {
     TimeEntryRepository timeEntryRepository(DataSource dataSource) {
         return new JdbcTimeEntryRepository(dataSource);
     }
+    @Bean
+    CustomInfoContributor customInfoContributor() {
+        return  new CustomInfoContributor();
+    }
 
     @Bean
     public ObjectMapper jsonObjectMapper() {
